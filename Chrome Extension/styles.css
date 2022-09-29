@@ -1,0 +1,62 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap');
+* {
+	margin: 0;
+}
+
+body {
+	min-width: 400px;
+	box-sizing: border-box;
+	padding: 10px;
+	font-family: 'Inter', sans-serif;
+	background-color: #edececff;
+}
+.container {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-end;
+}
+
+input {
+	width: 95%;
+	padding: 10px;
+	margin-bottom: 10px;
+	border: 1px solid #43bf44ff;
+}
+
+button {
+	width: 135px;
+	text-transform: uppercase;
+	padding: 10px 0;
+	border: none;
+	border: 1px solid #43bf44ff;
+	color: white;
+	font-weight: bold;
+	font-size: 16px;
+	background-color: #43bf44ff;
+	cursor: pointer;
+}
+
+#tab-btn {
+	color: #43bf44ff;
+	background-color: white;
+	border: 1px solid #43bf44ff;
+}
+#delete-btn {
+	color: white;
+	background-color: #ff1818;
+	border: 1px solid #ff1818;
+}
+
+ul {
+	margin-top: 20px;
+	list-style: none;
+	padding-left: 0;
+}
+
+li {
+	margin-top: 5px;
+}
+
+li a {
+	color: #43bf44ff;
+}
