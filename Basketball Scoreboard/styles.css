@@ -1,0 +1,115 @@
+@import url('http://fonts.cdnfonts.com/css/cursed-timer-ulil');
+@import url('http://fonts.cdnfonts.com/css/verdana');
+* {
+	box-sizing: border-box;
+	margin: 0;
+}
+body {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+	font-family: 'Cursed Timer ULiL', sans-serif;
+	background-color: #04042c;
+}
+
+section {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	width: 70%;
+	min-width: 600px;
+	padding: 3rem 0;
+	border: 3px solid #eeeeee;
+	text-align: center;
+}
+
+.team {
+	margin: 1.5rem 0 3.5rem;
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 40px;
+	line-height: 0.89725;
+	color: #eeeeee;
+}
+
+.score-wrapper {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+.score-box,
+.timer-wrapper {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-bottom: 2rem;
+	padding: 10px 20px;
+	border-radius: 5px;
+	background-color: #000000b2;
+	border: none;
+}
+#home-score-el,
+#guest-score-el {
+	font-size: 90px;
+	line-height: 1.407444444444444;
+	color: #e8521793;
+	font-family: 'Cursed Timer ULiL', sans-serif;
+}
+.score-btn {
+	width: 45px;
+	height: 45px;
+	border: 1px solid #eeeeee;
+	border-radius: 5px;
+	font-family: 'Cursed Timer ULiL', sans-serif;
+	font-size: 18px;
+	color: #eeeeee;
+	background-color: transparent;
+	cursor: pointer;
+	transition: all 0.1s ease-in;
+}
+.score-btn:hover {
+	color: black;
+	background-color: #eeeeee;
+}
+
+.middle-container {
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: center;
+	height: 100%;
+}
+.timer-wrapper {
+	width: 80%;
+}
+img {
+	width: 250px;
+}
+#timer {
+	padding-top: 5px;
+	font-size: 60px;
+	color: #c21010;
+}
+
+#reset-btn {
+	width: 60%;
+	max-width: 250px;
+	height: 48px;
+	align-items: center;
+	border: none;
+	border-radius: 5px;
+	font-family: Verdana, Geneva, sans-serif;
+	letter-spacing: 0.14rem;
+	font-size: 24px;
+	text-transform: uppercase;
+	color: #eeeeee;
+	background-color: #e85117;
+	cursor: pointer;
+	transition: all 0.3s ease-in;
+}
+
+#reset-btn:hover {
+	color: #e85117;
+	background-color: #eeeeee;
+}

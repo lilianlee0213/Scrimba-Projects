@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="http://fonts.cdnfonts.com/css/cursed-timer-ulil" rel="stylesheet">
+  <link href="http://fonts.cdnfonts.com/css/verdana" rel="stylesheet">
+  <link rel="stylesheet" href="./styles.css">
+  <title>Basketball Scoreboard</title>
+
+</head>
+
+<body>
+  <section>
+    <div class="left-container">
+      <h3 class="team">HOME</h3>
+      <div class="score-wrapper">
+        <div id="home-score-box" class="score-box">
+          <h1 id="home-score-el">00</h1>
+        </div>
+        <div class="score-btn-wrapper">
+          <button id="scoreBtn1" class="score-btn" onclick="homePoint1()">+1</button>
+          <button id="homeScoreBtn2" class="score-btn" onclick="homePoint2()">+2</button>
+          <button id="homeScoreBtn3" class="score-btn" onclick="homePoint3()">+3</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="middle-container">
+      <div class="timer-wrapper">
+        <h4 id="timer">Start</h4>
+      </div>
+      <div class="image-wrapper">
+        <img src="./7121903.png" alt="">
+      </div>
+      <button id="reset-btn" onclick="handleReset()">Reset</button>
+
+    </div>
+
+    <div class="right-container">
+      <h3 class="team">Guest</h3>
+      <div class="score-wrapper">
+        <div id="guest-score-box" class="score-box">
+          <h1 id="guest-score-el">00</h1>
+        </div>
+        <div class="score-btn-wrapper">
+          <button id="scoreBtn1" class="score-btn" onclick="guestPoint1()">+1</button>
+          <button id="guestScoreBtn2" class="score-btn" onclick="guestPoint2()">+2</button>
+          <button id="guestScoreBtn3" class="score-btn" onclick="guestPoint3()">+3</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script src="./script.js"></script>
+</body>
+
+</html>

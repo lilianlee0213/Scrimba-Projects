@@ -1,0 +1,199 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap');
+* {
+	margin: 0;
+	box-sizing: border-box;
+}
+
+body {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100vw;
+	height: 100vh;
+	font-family: 'Inter', sans-serif;
+	background-color: #1f2937;
+}
+
+#start-modal {
+	width: 90%;
+	padding: 70px 33px;
+	background-color: #ecfdf5;
+}
+
+h1 {
+	margin-bottom: 20px;
+	/* margin-bottom: 10px; */
+	font-family: 'Karla', sans-serif;
+	/* font-size: 40px; */
+	font-size: 42px;
+	font-weight: 800;
+	line-height: 1;
+	letter-spacing: -0.05em;
+	color: #2b283a;
+}
+
+h1 span {
+	color: #2ecc71;
+}
+
+p {
+	margin-bottom: 40px;
+	font-size: 16px;
+	font-weight: 400;
+	line-height: 1.4;
+	color: #6b7280;
+}
+
+.btn {
+	border: none;
+	border-radius: 6px;
+	font-family: 'Inter', sans-serif;
+	font-size: 14px;
+	font-weight: 500;
+	box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.05);
+	border-radius: 6px;
+	cursor: pointer;
+}
+#generate-btn {
+	padding: 9px;
+	width: 191px;
+	margin-bottom: 35px;
+	line-height: 1.5;
+	color: #ffffff;
+	background: #2ecc71;
+	transition: all 0.3s ease 0s;
+}
+
+#generate-btn:hover {
+	background: #27ae60;
+}
+
+hr {
+	margin-bottom: 35px;
+}
+
+.preference-wrapper {
+	margin-bottom: 2.5rem;
+}
+
+.preference-title {
+	margin-bottom: 15px;
+	font-family: 'Inter', sans-serif;
+	font-size: 18px;
+	font-weight: 500;
+}
+
+.length-field,
+.characters-field {
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	gap: 0.5rem;
+	margin-bottom: 0.5rem;
+}
+
+/* Input:Radio Sytles */
+input[type='radio'] {
+	appearance: none;
+	-webkit-appearance: none;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 20px;
+	width: 20px;
+	border-radius: 5px;
+	outline: none;
+	background-color: #d5d5d5;
+	cursor: pointer;
+}
+input[type='radio']::after {
+	font-family: 'Font Awesome 6 Pro';
+	content: '\f00c';
+	font-weight: 900;
+	font-size: 15px;
+	color: white;
+	display: none;
+}
+
+input[type='radio']:hover {
+	background-color: #c3c2c2;
+}
+
+input[type='radio']:checked {
+	background-color: #27ae60;
+}
+input[type='radio']:checked::after {
+	display: block;
+}
+
+/* Password Styles */
+.passwords {
+	display: flex;
+	align-items: center;
+	gap: 15px;
+}
+.password-wrapper {
+	display: flex;
+	justify-content: space-between;
+	padding: 10px;
+	min-width: 150px;
+	border-radius: 6px;
+	line-height: 2;
+	color: #2ecc7062;
+	background: #273549;
+}
+.clipboard-icon1,
+.clipboard-icon2 {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	width: 28px;
+	height: 34px;
+	border-radius: 4px;
+	background-color: #1f2937;
+	cursor: pointer;
+}
+.clipboard-icon1:hover,
+.clipboard-icon2:hover {
+	background-color: #2ecc70c7;
+}
+
+i {
+	font-size: 16px;
+	color: white;
+	cursor: pointer;
+}
+/* Screen Size */
+@media screen and (min-width: 481px) {
+	#start-modal {
+		width: 650px;
+		padding: 52px;
+	}
+
+	h1 {
+		margin-bottom: 10px;
+		font-size: 40px;
+	}
+	.title {
+		display: block;
+	}
+	p {
+		margin-bottom: 51px;
+		font-size: 20px;
+	}
+
+	.btn {
+		font-size: 16px;
+	}
+
+	.passwords {
+		justify-content: space-evenly;
+		gap: 30px;
+	}
+
+	.password-wrapper {
+		width: 235px;
+	}
+}
