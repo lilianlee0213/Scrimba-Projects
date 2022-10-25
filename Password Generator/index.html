@@ -1,78 +1,78 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="./styles.css">
-  <script src="https://kit.fontawesome.com/93143b8d47.js" crossorigin="anonymous"></script>
-  <title>Password Generator</title>
-</head>
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles.css">
+    <script src="https://kit.fontawesome.com/93143b8d47.js" crossorigin="anonymous"></script>
+    <title>test</title>
+  </head>
 
-<body>
-  <div id="start-modal">
-    <h1>
-      Generator a
-      <span class="title">random password</span>
-    </h1>
-    <p>
-      Never use a insecure password again.
-    </p>
-    <button class="btn" id="generate-btn">
-      Generate Passwords
-    </button>
-    <hr>
-    <div class="user-preference">
-      <div class="preference-wrapper">
-        <h6 class="preference-title">
-          Password length:
-        </h6>
-        <div class="length-field">
-          <input type="radio" id="8-characters" name="characters" value="8-characters" checked>
-          <label for="8-characters">8 Characters</label>
+  <body>
+    <div id="start-modal">
+      <h1>
+        Generator a
+        <span class="title">random password</span>
+      </h1>
+      <p>
+        Never use a insecure password again.
+      </p>
+      <button class="btn" id="generate-btn">
+        Generate Passwords
+      </button>
+      <hr>
+      <div class="user-preference">
+        <div class="preference-wrapper">
+          <h6 class="preference-title">
+            Password length:
+          </h6>
+          <div class="length-field">
+            <input type="radio" id="8-characters" name="characters" value="8-characters" checked>
+            <label for="8-characters">8 Characters</label>
+          </div>
+          <div class="length-field">
+            <input type="radio" id="12-characters" name="characters" value="12-characters">
+            <label for="12-characters">12 Characters</label>
+          </div>
+          <div class="length-field">
+            <input type="radio" id="15-characters" name="characters" value="15-characters">
+            <label for="15-characters">15 Characters</label>
+          </div>
         </div>
-        <div class="length-field">
-          <input type="radio" id="12-characters" name="characters" value="12-characters">
-          <label for="12-characters">12 Characters</label>
-        </div>
-        <div class="length-field">
-          <input type="radio" id="15-characters" name="characters" value="15-characters">
-          <label for="15-characters">15 Characters</label>
+        <div class="preference-wrapper">
+          <h6 class="preference-title">
+            Characters include:
+          </h6>
+          <div class="characters-field">
+            <input type="radio" name="include" id="include-all" checked>
+            <label for="include-all">All characters</label>
+          </div>
+          <div class="characters-field">
+            <input type="radio" name="include" id="letters-numbers">
+            <label for="letters-numbers">Letters and Numbers</label>
+          </div>
+          <div class="characters-field">
+            <input type="radio" name="include" id="numbers-symbols">
+            <label for="numbers-symbols">Numbers and Symbols</label>
+          </div>
         </div>
       </div>
-      <div class="preference-wrapper">
-        <h6 class="preference-title">
-          Characters include:
-        </h6>
-        <div class="characters-field">
-          <input type="radio" name="include" id="include-all" checked>
-          <label for="include-all">All characters</label>
+      <div class="passwords">
+        <div class="password-wrapper">
+          <div class="btn" id="password-one">D(A5E\[xs</div>
+          <span class="clipboard-icon1"><i class="fa-solid fa-clipboard-check"></i></span>
         </div>
-        <div class="characters-field">
-          <input type="radio" name="include" id="letters-numbers">
-          <label for="letters-numbers">Letters and Numbers</label>
+        <div class="password-wrapper">
+          <div class="btn" id="password-two">-~!C:RI*</div>
+          <span class="clipboard-icon2"><i class="fa-solid fa-clipboard-check"></i></span>
         </div>
-        <div class="characters-field">
-          <input type="radio" name="include" id="numbers-symbols">
-          <label for="numbers-symbols">Numbers and Symbols</label>
-        </div>
+
       </div>
     </div>
-    <div class="passwords">
-      <div class="password-wrapper">
-        <div class="btn" id="password-one">D(A5E\[xs</div>
-        <span class="clipboard-icon1"><i class="fa-solid fa-clipboard-check"></i></span>
-      </div>
-      <div class="password-wrapper">
-        <div class="btn" id="password-two">-~!C:RI*</div>
-        <span class="clipboard-icon2"><i class="fa-solid fa-clipboard-check"></i></span>
-      </div>
 
-    </div>
-  </div>
-
-  <script src="./script.js"></script>
-</body>
+    <script src="./script.js"></script>
+  </body>
 
 </html>
