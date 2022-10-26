@@ -169,12 +169,25 @@ const catsData = [
 	},
 ];
 const emotionRadio = document.getElementById('emotion-radios');
+emotionRadio.addEventListener('change', highlightCheckedOption);
 
+function highlightCheckedOption(e) {
+	// remove class of other radios
+	const radiosArray = document.getElementsByClassName('radio');
+	for (let radio of radiosArray) {
+		radio.classList.remove('highlight');
+	}
+	// only selected
+	document.getElementById(e.target.id).parentElement.classList.add('highlight');
+}
 function getEmotionsArray(cats) {
 	const emotionsArray = [];
 	for (let cat of cats) {
 		for (let emotion of cat.emotionTags) {
-			emotionsArray.push(emotion);
+			// remove duplicates
+			if (!emotionsArray.includes(emotion)) {
+				emotionsArray.push(emotion);
+			}
 		}
 	}
 	return emotionsArray;
