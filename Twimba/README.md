@@ -10,4 +10,8 @@ The Frontend Developer Career Path aims to teach you everything you need to beco
 - [The Frontend Career Path](https://scrimba.com/learn/frontend)
 - [Become a Scrimba Pro member](https://scrimba.com/pricing)
 
-Happy Coding!
+Stretch Goals:
+
+1)Add the ability to reply to a specific tweet
+2)Save tweets, likes, and retweets to local storage
+3)Allow a user to delete a tweet
