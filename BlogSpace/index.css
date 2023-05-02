@@ -8,7 +8,6 @@ body {
 	height: 100vh;
 	font-family: 'Inconsolata', monospace;
 	text-transform: capitalize;
-	letter-spacing: 0.01rem;
 	line-height: 20px;
 }
 nav {
@@ -35,11 +34,17 @@ form {
 	width: 50%;
 	min-width: none;
 	max-width: none;
+	font-size: 16px;
 }
 label {
 	font-size: 20px;
 	margin-bottom: 10px;
 }
+input,
+textarea {
+	font-family: 'Inconsolata', monospace;
+}
+
 input:focus,
 textarea:focus {
 	outline-color: #6096b4;
@@ -65,6 +70,7 @@ h3 {
 }
 #post-list > div {
 	padding: 20px;
+	border-radius: 5px;
 	background-color: #bdcdd6;
 }
 #post-list > div:not(:last-child) {
