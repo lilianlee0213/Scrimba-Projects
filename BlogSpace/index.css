@@ -1,0 +1,46 @@
+@import url('https://fonts.googleapis.com/css2?family=Darumadrop+One&family=Inconsolata:wght@300;400&display=swap');
+body {
+	position: relative;
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	width: 100vw;
+	height: 100vh;
+	font-family: 'Inconsolata', monospace;
+	text-transform: capitalize;
+	letter-spacing: 0.01rem;
+	line-height: 20px;
+}
+nav {
+	position: fixed;
+	display: flex;
+	width: 100%;
+	align-items: center;
+	padding: 30px;
+	height: 50px;
+	font-family: 'Darumadrop One', cursive;
+	background-color: #6096b4;
+}
+
+nav > h1 {
+	font-size: 40px;
+	color: #eee9da;
+}
+h3 {
+	margin: 0;
+	margin-bottom: 30px;
+	text-transform: capitalize;
+	font-family: 'Darumadrop One', cursive;
+	font-size: 24px;
+}
+
+#post-list {
+	padding: 150px 30px;
+}
+#post-list > div {
+	padding: 20px;
+	background-color: #bdcdd6;
+}
+#post-list > div:not(:last-child) {
+	margin-bottom: 40px;
+}
