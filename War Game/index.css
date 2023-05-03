@@ -9,6 +9,8 @@ body {
 	flex-direction: column;
 	justify-content: space-between;
 	align-items: center;
+	font-family: sans-serif;
+	color: white;
 	background: url('./img/table.png');
 }
 button {
