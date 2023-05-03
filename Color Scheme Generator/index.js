@@ -1,23 +1,34 @@
 const BASE_URL = 'https://www.thecolorapi.com/scheme?hex=';
 
-const seedColor = document.getElementById('seed-color').value.slice(1, 7);
+const colorInput = document.getElementById('seed-color');
 const mode = document.getElementById('mode');
 const colorPalette = document.getElementById('color-palette');
-mode.addEventListener('change', () => console.log(mode.value));
+const form = document.getElementById('form');
 
-fetch(`${BASE_URL}${seedColor}&mode=monochrome`)
-	.then((res) => res.json())
-	.then((data) => {
-		let html = '';
-		for (let color of data.colors) {
-			html += `
+const renderColors = (data) => {
+	let html = '';
+	for (let color of data.colors) {
+		html += `
             <div class="color">
                 <div class="color-image" style="background: url(${color.image.bare});"></div>
                 <div class="hexcode">${color.hex.value}</div>
             </div>
         `;
-		}
-		colorPalette.innerHTML = html;
-	});
+	}
+	colorPalette.innerHTML = html;
+};
+form.addEventListener('submit', (e) => {
+	e.preventDefault();
+	const seedColor = colorInput.value.slice(1, 7);
+	fetch(`${BASE_URL}${seedColor}&mode=${mode.value}`)
+		.then((res) => res.json())
+		.then((scheme) => {
+			renderColors(scheme);
+		});
+});
 
-// // "monochrome, monochrome-dark, monochrome-light, analogic, complement, analogic-complement, triad, quad",
+fetch(`${BASE_URL}000000&mode=monochrome`)
+	.then((res) => res.json())
+	.then((data) => {
+		renderColors(data);
+	});
