@@ -42,6 +42,9 @@ drawCardBtn.addEventListener('click', () => {
 			const winnerText = determineWinner(data.cards[0], data.cards[1]);
 			header.innerText = winnerText;
 			remainingCards.innerText = `Remaining Cards: ${data.remaining}`;
+			if (data.remaining === 0) {
+				drawCardBtn.disabled = true;
+			}
 		});
 });
 
