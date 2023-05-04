@@ -36,7 +36,6 @@ drawCardBtn.addEventListener('click', () => {
 	fetch(`https://apis.scrimba.com/deckofcards/api/deck/${deckId}/draw/?count=2`)
 		.then((res) => res.json())
 		.then((data) => {
-			console.log(data);
 			cards.children[0].innerHTML = `
 				<img src=${data.cards[0].image} class="card" />
             `;
@@ -48,6 +47,13 @@ drawCardBtn.addEventListener('click', () => {
 			remainingCards.innerText = `Remaining Cards: ${data.remaining}`;
 			if (data.remaining === 0) {
 				drawCardBtn.disabled = true;
+				if (computerScore > userScore) {
+					header.innerText = 'The computer won the game!';
+				} else if (userScore > computerScore) {
+					header.innerText = 'You won the game!';
+				} else {
+					header.textContent = "It's a tie game!";
+				}
 			}
 		});
 });
