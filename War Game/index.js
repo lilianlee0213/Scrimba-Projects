@@ -24,6 +24,7 @@ function handleClick() {
 		.then((res) => res.json())
 		.then((data) => {
 			deckId = data.deck_id;
+			remainingCards.innerText = `Remaining Cards: ${data.remaining}`;
 		});
 }
 newDeckBtn.addEventListener('click', handleClick);
