@@ -1,4 +1,5 @@
 let deckId;
+const remainingCards = document.getElementById('remaining-cards');
 const cards = document.getElementById('cards');
 const newDeckBtn = document.getElementById('new-deck');
 const drawCardBtn = document.getElementById('draw-cards');
@@ -30,6 +31,7 @@ drawCardBtn.addEventListener('click', () => {
 	fetch(`https://apis.scrimba.com/deckofcards/api/deck/${deckId}/draw/?count=2`)
 		.then((res) => res.json())
 		.then((data) => {
+			console.log(data);
 			cards.children[0].innerHTML = `
 				<img src=${data.cards[0].image} class="card" />
             `;
@@ -38,6 +40,7 @@ drawCardBtn.addEventListener('click', () => {
             `;
 			const winnerText = determineWinner(data.cards[0], data.cards[1]);
 			header.innerText = winnerText;
+			remainingCards.innerText = `Remaining Cards: ${data.remaining}`;
 		});
 });
 

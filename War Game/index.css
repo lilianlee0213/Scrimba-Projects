@@ -20,7 +20,8 @@ button {
 	background-color: #fff100;
 	cursor: pointer;
 }
-button#new-deck {
+.flex-self {
+	display: flex;
 	align-self: flex-start;
 }
 
