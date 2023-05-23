@@ -19,10 +19,6 @@ function App() {
 	const rollDice = () => {
 		setDice(allNewDice());
 	};
-	const findDuplicates = () => {
-		console.log(dice.filter((die) => die.value));
-	};
-	findDuplicates();
 	return (
 		<main>
 			<div className="dice-container">
