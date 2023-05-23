@@ -12,7 +12,7 @@ body {
 main {
 	display: flex;
 	flex-direction: column;
-	justify-content: center;
+	justify-content: space-around;
 	align-items: center;
 	width: 100%;
 	min-width: 400px;
@@ -40,4 +40,22 @@ main {
 }
 .die-num {
 	font-size: 2rem;
+}
+.roll-dice {
+	width: 100px;
+	height: 50px;
+	border: none;
+	border-radius: 6px;
+	font-size: 1.2rem;
+	font-family: 'Inter', sans-serif;
+	color: white;
+	background-color: #5035ff;
+	cursor: pointer;
+}
+
+.roll-dice:focus {
+	outline: none;
+}
+.roll-dice:active {
+	box-shadow: inset 5px 5px 10px -3px rgba(0, 0, 0, 0.7);
 }
