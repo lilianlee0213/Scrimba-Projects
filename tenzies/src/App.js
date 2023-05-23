@@ -2,6 +2,7 @@ import {useEffect, useState} from 'react';
 import {nanoid} from 'nanoid';
 import Die from './Die';
 import './index.css';
+import Confetti from 'react-confetti';
 
 function App() {
 	const generateNewDie = () => {
@@ -45,6 +46,7 @@ function App() {
 
 	return (
 		<main>
+			{tenzies && <Confetti />}
 			<h1 className="title">Tenzies</h1>
 			<p className="instructions">
 				Roll until all dice are the smae. Click each die to freeze it at its
