@@ -19,11 +19,12 @@ function App() {
 	const rollDice = () => {
 		setDice(allNewDice());
 	};
+
 	return (
 		<main>
 			<div className="dice-container">
 				{dice.map((die) => (
-					<Die key={die.id} value={die.value} />
+					<Die key={die.id} value={die.value} isHeld={die.isHeld} />
 				))}
 			</div>
 			<button className="roll-dice" onClick={rollDice}>
