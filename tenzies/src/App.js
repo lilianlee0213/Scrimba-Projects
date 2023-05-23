@@ -2,6 +2,14 @@ import Die from './Die';
 import './index.css';
 
 function App() {
+	const allNewDice = () => {
+		let newArray = [];
+		for (let i = 0; i < 10; i++) {
+			newArray.push(Math.ceil(Math.random() * 6));
+		}
+		return newArray;
+	};
+	allNewDice();
 	return (
 		<main>
 			<div className="dice-container">
