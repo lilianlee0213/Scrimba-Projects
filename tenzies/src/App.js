@@ -4,20 +4,24 @@ import Die from './Die';
 import './index.css';
 
 function App() {
+	const generateNewDie = () => {
+		return {id: nanoid(), value: Math.ceil(Math.random() * 6), isHeld: false};
+	};
 	const allNewDice = () => {
 		let newArray = [];
 		for (let i = 0; i < 10; i++) {
-			newArray.push({
-				id: nanoid(),
-				value: Math.ceil(Math.random() * 6),
-				isHeld: false,
-			});
+			newArray.push(generateNewDie());
 		}
 		return newArray;
 	};
+
 	const [dice, setDice] = useState(allNewDice());
 	const rollDice = () => {
-		setDice(allNewDice());
+		setDice((oldDice) =>
+			oldDice.map((die) => {
+				return die.isHeld ? die : generateNewDie();
+			})
+		);
 	};
 	const holdDice = (id) => {
 		setDice((oldDice) =>
