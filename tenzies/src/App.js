@@ -1,5 +1,7 @@
+import './index.css';
+
 function App() {
-	return <div>Tenzies</div>;
+	return <main>Tenzies</main>;
 }
 
 export default App;
